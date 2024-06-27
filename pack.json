@@ -1363,7 +1363,7 @@
 				"type": "ALL",
 				"rules": [
 					"AccessFarFallLowerLeft",
-					"JUMP_5"
+					"JUMP_6"
 				]
 			}
 		},
@@ -2174,7 +2174,7 @@
 								"type": "ITEM",
 								"value": "Duck"
 							},
-							"JUMP_6"
+							"JUMP_5"
 						]
 					}
 				]
@@ -2328,7 +2328,7 @@
 					{
 						"type": "ALL",
 						"rules": [
-							"AccessNightWalkUpper",
+							"AccessNightWalkUpper",
 							"RED"
 						]
 					}
@@ -3175,6 +3175,7 @@
 			"type": "ALL",
 			"rules": [
 				"AccessFarFallLowerLeft",
+				"JUMP_6",
 				"SLIDE"
 			]
 		},
@@ -3470,10 +3471,13 @@
 			"rules": [
 				"AccessSkyTown",
 				{
-					"type": "VAR",
-					"name": "Crystals",
+					"type": "VALUE",
+					"left": {
+						"type": "VAR",
+						"name": "Crystals"
+					},
 					"op": ">",
-					"value": 1167
+					"right": 1167
 				}
 			]
 		},
