@@ -17,10 +17,333 @@
 					"type": "Row",
 					"children": [
 						{
+							"halign": "EXPAND"
+						},
+						{
 							"type": "LocationMap",
 							"id": "Overworld",
 							"image": "aus_assets/OverworldMap.png",
-							"some_reachable_color": "gold"
+							"some_reachable_color": "gold",
+							"halign": "EXPAND",
+							"stretch_ratio": 2.62
+						},
+						{
+							"type": "Margin",
+							"top": 10,
+							"left": 20,
+							"bottom": 10,
+							"right": 20,
+							"color": "black",
+							"halign": "EXPAND",
+							"valign": "SHRINK_CENTER",
+							"child": {
+								"type": "Column",
+								"children": [
+									{
+										"type": "Label",
+										"text": "Abilities",
+										"size": 20,
+										"color": "white"
+									},
+									{
+										"type": "Grid",
+										"columns": 2,
+										"halign": "SHRINK_CENTER",
+										"hspacing": 20,
+										"vspacing": 2,
+										"children": [
+											{
+												"type": "Icon",
+												"image": "aus_assets/jump.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_END",
+												"tooltip": "Jump Upgrades",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Jump Upgrade"
+													},
+													"max": 3
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/doublejump.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_BEGIN",
+												"tooltip": "Double Jump Upgrades",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Double Jump Upgrade"
+													},
+													"max": 3
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/redenergy.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_END",
+												"tooltip": "Red Energy",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Red Energy"
+													},
+													"max": 1
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/yellowenergy.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_BEGIN",
+												"tooltip": "Yellow Energy",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Yellow Energy"
+													},
+													"max": 1
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/fireshot.png",
+												"width": 50,
+												"height": 25,
+												"halign": "SHRINK_END",
+												"tooltip": "Fire Shot",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Progressive Fire Shot"
+													},
+													"max": 2
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/iceshot.png",
+												"width": 50,
+												"height": 25,
+												"halign": "SHRINK_BEGIN",
+												"tooltip": "Ice Shot",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Ice Shot"
+													},
+													"max": 1
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/duck.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_END",
+												"tooltip": "Duck",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Duck"
+													},
+													"max": 1
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/divebomb.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_BEGIN",
+												"tooltip": "Divebomb",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Smash"
+													},
+													"max": 1
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/cling.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_END",
+												"tooltip": "Ceiling Climb",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Progressive Ceiling Stick"
+													},
+													"max": 2
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/pots.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_BEGIN",
+												"tooltip": "Lucky Pots",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Lucky Pots"
+													},
+													"max": 1
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/eggcrack.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_END",
+												"tooltip": "Hatch",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Hatch"
+													},
+													"max": 1
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/bluecrystal.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_BEGIN",
+												"tooltip": "Magnetism",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Money Magnet"
+													},
+													"max": 1
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/blueheart.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_END",
+												"tooltip": "Extra Air",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Extra Air Capacity"
+													},
+													"max": 2
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/toughness.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_BEGIN",
+												"tooltip": "Toughness Up",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Toughness Upgrade"
+													},
+													"max": 3
+												}
+											}
+										]
+									},
+									{
+										"height": 10
+									},
+									{
+										"type": "Label",
+										"text": "Collectables",
+										"size": 20,
+										"color": "white"
+									},
+									{
+										"type": "Grid",
+										"columns": 2,
+										"halign": "SHRINK_CENTER",
+										"hspacing": 20,
+										"vspacing": 2,
+										"children": [
+											{
+												"type": "Icon",
+												"image": "aus_assets/goldorb.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_END",
+												"tooltip": "Gold Orbs",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Gold Orb"
+													},
+													"max": 10
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/heart.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_BEGIN",
+												"tooltip": "Hearts",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Heart"
+													},
+													"max": 92
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/flower.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_END",
+												"tooltip": "Secret Flowers",
+												"value": {
+													"val": {
+														"type": "ITEMCOUNT",
+														"name": "Secret Flower"
+													},
+													"max": 20
+												}
+											},
+											{
+												"type": "Icon",
+												"image": "aus_assets/pinkcrystal.png",
+												"width": 25,
+												"height": 25,
+												"halign": "SHRINK_BEGIN",
+												"tooltip": "Total Crystals",
+												"value": {
+													"val": {
+														"type": "VAR",
+														"name": "Crystals"
+													},
+													"max": 3160
+												}
+											}
+										]
+									},
+								]
+							}
 						}
 					]
 				},
