@@ -23,16 +23,14 @@
 							"type": "LocationMap",
 							"id": "Overworld",
 							"image": "aus_assets/OverworldMap.png",
-							"some_reachable_color": "gold",
-							"halign": "EXPAND",
-							"stretch_ratio": 2.62
+							"some_reachable_color": "gold"
 						},
 						{
 							"type": "Margin",
-							"top": 10,
-							"left": 20,
-							"bottom": 10,
-							"right": 20,
+							"top": 20,
+							"left": 30,
+							"bottom": 20,
+							"right": 30,
 							"color": "black",
 							"halign": "EXPAND",
 							"valign": "SHRINK_CENTER",
@@ -265,7 +263,9 @@
 										]
 									},
 									{
-										"height": 10
+										"height": 10,
+										"halign": "SHRINK_CENTER",
+										"valign": "SHRINK_CENTER"
 									},
 									{
 										"type": "Label",
