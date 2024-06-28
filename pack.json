@@ -533,6 +533,13 @@
 					"AccessBlackCastleInner",
 					"FIRE"
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessBlackCastleInnerOOL",
+					"FIRE"
+				]
 			}
 		},
 		{
@@ -551,6 +558,13 @@
 					"AccessBlackCastleInner",
 					"FIRE"
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessBlackCastleInnerOOL",
+					"FIRE"
+				]
 			}
 		},
 		{
@@ -567,6 +581,13 @@
 				"type": "ALL",
 				"rules": [
 					"AccessBlackCastleInner",
+					"FIRE"
+				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessBlackCastleInnerOOL",
 					"FIRE"
 				]
 			}
@@ -588,6 +609,33 @@
 					"RED",
 					"FIRE"
 				]
+			},
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessBlancLandLowerLeft",
+							"ICE"
+						]
+					},
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessBlancLandLowerLeftOOL",
+							"ICE"
+						]
+					},
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessBlancLandLowerLeftOOL",
+							"RED",
+							"FIRE"
+						]
+					}
+				]
 			}
 		},
 		{
@@ -607,6 +655,33 @@
 					"RED",
 					"FIRE"
 				]
+			},
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessBlancLandLowerLeft",
+							"ICE"
+						]
+					},
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessBlancLandLowerLeftOOL",
+							"ICE"
+						]
+					},
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessBlancLandLowerLeftOOL",
+							"RED",
+							"FIRE"
+						]
+					}
+				]
 			}
 		},
 		{
@@ -624,13 +699,6 @@
 				"rules": [
 					"AccessBlancLandLowerLeft",
 					"RED",
-					"ICE"
-				]
-			},
-			"Out of Logic": {
-				"type": "ALL",
-				"rules": [
-					"AccessBlancLandLowerLeft",
 					"ICE"
 				]
 			}
@@ -663,6 +731,32 @@
 					"AccessBlancLandLowerLeft",
 					"RED",
 					"FIRE",
+					"SLIDE"
+				]
+			},
+			"Reachable": {
+				"type": "ALL",
+				"rules": [
+					{
+						"type": "ANY",
+						"rules": [
+							"AccessBlancLandLowerLeft",
+							"AccessBlancLandLowerLeftOOL"
+						]
+					},
+					{
+						"type": "ANY",
+						"rules": [
+							"ICE",
+							{
+								"type": "ALL",
+								"rules": [
+									"FIRE",
+									"RED"
+								]
+							}
+						]
+					},
 					"SLIDE"
 				]
 			}
@@ -877,7 +971,8 @@
 					"y": 7
 				}
 			],
-			"Reachable": "AccessTheCurtainUpper"
+			"Reachable": "AccessTheCurtainUpper",
+			"Out of Logic": "AccessTheCurtainUpperOOL"
 		},
 		{
 			"id": "Curtain_boss_14",
@@ -889,7 +984,8 @@
 					"y": 7
 				}
 			],
-			"Reachable": "AccessTheCurtainUpper"
+			"Reachable": "AccessTheCurtainUpper",
+			"Out of Logic": "AccessTheCurtainUpperOOL"
 		},
 		{
 			"id": "Curtain_break",
@@ -907,6 +1003,13 @@
 					"AccessTheCurtainUpper",
 					"DIVEBOMB"
 				]
+			},
+			"Out of Logic": {
+ 				"type": "ALL",
+ 				"rules": [
+					"AccessTheCurtainUpperOOL",
+ 					"DIVEBOMB"
+				]
 			}
 		},
 		{
@@ -919,7 +1022,8 @@
 					"y": 37
 				}
 			],
-			"Reachable": "AccessTheCurtainUpper"
+			"Reachable": "AccessTheCurtainUpper",
+			"Out of Logic": "AccessTheCurtainUpperOOL"
 		},
 		{
 			"id": "Curtain_start_flower",
@@ -931,7 +1035,8 @@
 					"y": 82
 				}
 			],
-			"Reachable": "AccessTheCurtain"
+			"Reachable": "AccessTheCurtain",
+			"Out of Logic": "AccessTheCurtainOOL"
 		},
 		{
 			"id": "Darkgrotto_bot_right_flower",
@@ -950,7 +1055,13 @@
 					"FIRE"
 				]
 			},
-			"Out of Logic": "AccessDarkGrottoPostBoss"
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					"AccessDarkGrottoPostBoss",
+					"AccessDarkGrottoPostBossOOL"
+				]
+			}
 		},
 		{
 			"id": "Darkgrotto_boss_13",
@@ -969,7 +1080,13 @@
 					"FIRE"
 				]
 			},
-			"Out of Logic": "AccessDarkGrottoPostBoss"
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					"AccessDarkGrottoPostBoss",
+					"AccessDarkGrottoPostBossOOL"
+				]
+			}
 		},
 		{
 			"id": "Darkgrotto_boss",
@@ -988,7 +1105,13 @@
 					"FIRE"
 				]
 			},
-			"Out of Logic": "AccessDarkGrottoPostBoss"
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					"AccessDarkGrottoPostBoss",
+					"AccessDarkGrottoPostBossOOL"
+				]
+			}
 		},
 		{
 			"id": "Darkgrotto_boss_torch",
@@ -1007,7 +1130,13 @@
 					"FIRE"
 				]
 			},
-			"Out of Logic": "AccessDarkGrottoPostBoss"
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					"AccessDarkGrottoPostBoss",
+					"AccessDarkGrottoPostBossOOL"
+				]
+			}
 		},
 		{
 			"id": "Darkgrotto_mid_right",
@@ -1019,7 +1148,8 @@
 					"y": 157
 				}
 			],
-			"Reachable": "AccessDarkGrotto"
+			"Reachable": "AccessDarkGrotto",
+			"Out of Logic": "AccessDarkGrottoOOL"
 		},
 		{
 			"id": "Darkgrotto_top_left",
@@ -1038,6 +1168,20 @@
 					"YELLOW",
 					"JUMP_7"
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					{
+						"type": "ANY",
+						"rules": [
+							"AccessDarkGrotto",
+							"AccessDarkGrottoOOL"
+						]
+					},
+					"YELLOW",
+					"JUMP_7"
+				]
 			}
 		},
 		{
@@ -1050,7 +1194,8 @@
 					"y": 232
 				}
 			],
-			"Reachable": "AccessDeepDiveRight"
+			"Reachable": "AccessDeepDiveRight",
+			"Out of Logic": "AccessDeepDiveRightOOL"
 		},
 		{
 			"id": "Deepdive_boss_flower",
@@ -1062,7 +1207,8 @@
 					"y": 232
 				}
 			],
-			"Reachable": "AccessDeepDiveRight"
+			"Reachable": "AccessDeepDiveRight",
+			"Out of Logic": "AccessDeepDiveRightOOL"
 		},
 		{
 			"id": "Deepdive_boss_12",
@@ -1074,7 +1220,8 @@
 					"y": 232
 				}
 			],
-			"Reachable": "AccessDeepDiveRight"
+			"Reachable": "AccessDeepDiveRight",
+			"Out of Logic": "AccessDeepDiveRightOOL"
 		},
 		{
 			"id": "Deepdive_exit_heart_mid",
@@ -1092,6 +1239,19 @@
 					"AccessDeepDiveRight",
 					"ICE"
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					{
+						"type": "ANY",
+						"rules": [
+							"AccessDeepDiveRight",
+							"AccessDeepDiveRightOOL"
+						]
+					},
+					"ICE"
+				]
 			}
 		},
 		{
@@ -1104,7 +1264,8 @@
 					"y": 202
 				}
 			],
-			"Reachable": "AccessDeepDiveRight"
+			"Reachable": "AccessDeepDiveRight",
+			"Out of Logic": "AccessDeepDiveRightOOL"
 		},
 		{
 			"id": "Deepdive_far_right",
@@ -1125,6 +1286,13 @@
 						"value": "Jump Upgrade",
 						"count": 3
 					}
+				]
+			},
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					"AccessDeepDiveRight",
+					"AccessDeepDiveRightOOL"
 				]
 			}
 		},
@@ -1148,6 +1316,13 @@
 						"count": 3
 					}
 				]
+			},
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					"AccessDeepDive",
+					"AccessDeepDiveOOL"
+				]
 			}
 		},
 		{
@@ -1169,6 +1344,13 @@
 						"value": "Double Jump Upgrade",
 						"count": 3
 					}
+				]
+			},
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					"AccessDeepDive",
+					"AccessDeepDiveOOL"
 				]
 			}
 		},
@@ -1192,6 +1374,13 @@
 						"count": 3
 					}
 				]
+			},
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					"AccessDeepDive",
+					"AccessDeepDiveOOL"
+				]
 			}
 		},
 		{
@@ -1204,7 +1393,8 @@
 					"y": 232
 				}
 			],
-			"Reachable": "AccessDeepDiveRight"
+			"Reachable": "AccessDeepDiveRight",
+			"Out of Logic": "AccessDeepDiveRightOOL"
 		},
 		{
 			"id": "Deepdive_shaft",
@@ -1220,8 +1410,32 @@
 				"type": "ALL",
 				"rules": [
 					"AccessDeepDive",
-					"ICE",
-					"JUMP_8"
+					{
+						"type": "ANY",
+						"rules": [
+							"ICE",
+							"JUMP_8"
+						]
+					}
+				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					{
+						"type": "ANY",
+						"rules": [
+							"AccessDeepDive",
+							"AccessDeepDiveOOL"
+						]
+					},
+					{
+						"type": "ANY",
+						"rules": [
+							"ICE",
+							"JUMP_8"
+						]
+					}
 				]
 			}
 		},
@@ -1235,7 +1449,8 @@
 					"y": 262
 				}
 			],
-			"Reachable": "AccessDeepDive"
+			"Reachable": "AccessDeepDive",
+			"Out of Logic": "AccessDeepDiveOOL"
 		},
 		{
 			"id": "Deepdive_shaft_mid_right",
@@ -1247,7 +1462,8 @@
 					"y": 217
 				}
 			],
-			"Reachable": "AccessDeepDive"
+			"Reachable": "AccessDeepDive",
+			"Out of Logic": "AccessDeepDiveOOL"
 		},
 		{
 			"id": "Deepdive_shaft_top",
@@ -1259,7 +1475,8 @@
 					"y": 187
 				}
 			],
-			"Reachable": "AccessDeepDive"
+			"Reachable": "AccessDeepDive",
+			"Out of Logic": "AccessDeepDiveOOL"
 		},
 		{
 			"id": "Deepdive_shaft_top_right",
@@ -1275,6 +1492,19 @@
 				"type": "ALL",
 				"rules": [
 					"AccessDeepDive",
+					"ICE"
+				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					{
+						"type": "ANY",
+						"rules": [
+							"AccessDeepDive",
+							"AccessDeepDiveOOL"
+						]
+					},
 					"ICE"
 				]
 			}
@@ -1317,10 +1547,15 @@
 				"type": "ALL",
 				"rules": [
 					"AccessDeepTower",
-					"SLIDE",
 					{
-						"type": "ITEM",
-						"value": "Double Jump Upgrade"
+						"type": "ANY",
+						"rules": [
+							"SLIDE",
+							{
+								"type": "ITEM",
+								"value": "Double Jump Upgrade"
+							}
+						]
 					}
 				]
 			}
@@ -1335,7 +1570,8 @@
 					"y": 97
 				}
 			],
-			"Reachable": "AccessNightWalkUpper"
+			"Reachable": "AccessNightWalkUpper",
+			"Out of Logic": "AccessNightWalkUpperOOL"
 		},
 		{
 			"id": "Farfall_3_balloons",
@@ -1507,7 +1743,13 @@
 			"Out of Logic": {
 				"type": "ALL",
 				"rules": [
-					"AccessFireCageInner",
+					{
+						"type": "ANY",
+						"rules": [
+							"AccessFireCageInner",
+							"AccessFireCageInnerOOL"
+						]
+					},
 					"RED"
 				]
 			}
@@ -1533,7 +1775,13 @@
 			"Out of Logic": {
 				"type": "ALL",
 				"rules": [
-					"AccessFireCageInner",
+					{
+						"type": "ANY",
+						"rules": [
+							"AccessFireCageInner",
+							"AccessFireCageInnerOOL"
+						]
+					},
 					"RED"
 				]
 			}
@@ -1552,6 +1800,15 @@
 				"type": "ALL",
 				"rules": [
 					"AccessFireCageInner",
+					"RED",
+					"YELLOW",
+					"SLIDE"
+				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessFireCageInnerOOL",
 					"RED",
 					"YELLOW",
 					"SLIDE"
@@ -1593,7 +1850,13 @@
 			"Out of Logic": {
 				"type": "ALL",
 				"rules": [
-					"AccessFireCageInner",
+					{
+						"type": "ANY",
+						"rules": [
+							"AccessFireCageInner",
+							"AccessFireCageInnerOOL"
+						]
+					},
 					"RED",
 					"JUMP_8"
 				]
@@ -1620,7 +1883,13 @@
 			"Out of Logic": {
 				"type": "ALL",
 				"rules": [
-					"AccessFireCageInner",
+					{
+						"type": "ANY",
+						"rules": [
+							"AccessFireCageInner",
+							"AccessFireCageInnerOOL"
+						]
+					},
 					"RED"
 				]
 			}
@@ -1648,7 +1917,13 @@
 					}
 				]
 			},
-			"Out of Logic": "AccessFireCageInnerOutOfLogic"
+			"Out of Logic": {
+				"type": "ANY",
+				"rules": [
+					"AccessFireCageInner",
+					"AccessFireCageInnerOOL"
+				]
+			}
 		},
 		{
 			"id": "Firecage_top_heart_door",
@@ -1660,7 +1935,8 @@
 					"y": 172
 				}
 			],
-			"Reachable": "AccessFireCageInner"
+			"Reachable": "AccessFireCageInner",
+			"Out of Logic": "AccessFireCageInnerOOL"
 		},
 		{
 			"id": "Firecage_top_left_gate",
@@ -1680,7 +1956,16 @@
 						"rules": [
 							"AccessFireCageInner",
 							"FIRE2",
-							"RED"
+							"RED",
+							"HATCH"
+						]
+					},
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessFireCageInner",
+							"SLIDE",
+							"HATCH"
 						]
 					},
 					{
@@ -1695,8 +1980,30 @@
 			"Out of Logic": {
 				"type": "ALL",
 				"rules": [
-					"AccessFireCageInnerOOL",
-					"FIRE2"
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessFireCageInnerOOL",
+							"FIRE2",
+							"RED",
+							"HATCH"
+						]
+					},
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessFireCageInnerOOL",
+							"SLIDE",
+							"HATCH"
+						]
+					},
+					{
+						"type": "ALL",
+						"rules": [
+							"AccessFireCageInnerOOL",
+							"SLIDE"
+						]
+					}
 				]
 			}
 		},
@@ -1742,6 +2049,13 @@
 					"AccessGrottoUpper",
 					"DIVEBOMB"
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessGrottoUpperOOL",
+					"DIVEBOMB"
+				]
 			}
 		},
 		{
@@ -1760,6 +2074,13 @@
 					"AccessGrottoUpper",
 					"DIVEBOMB"
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessGrottoUpperOOL",
+					"DIVEBOMB"
+				]
 			}
 		},
 		{
@@ -1772,7 +2093,8 @@
 					"y": 142
 				}
 			],
-			"Reachable": "AccessGrottoUpper"
+			"Reachable": "AccessGrottoUpper",
+			"Out of Logic": "AccessGrottoUpperOOL"
 		},
 		{
 			"id": "Grotto_mural_heart",
@@ -1791,7 +2113,7 @@
 					{
 						"type": "ITEM",
 						"value": "Double Jump Upgrade",
-						"count": 2
+						"count": 1
 					},
 					"JUMP_4"
 				]
@@ -1818,7 +2140,8 @@
 					"y": 97
 				}
 			],
-			"Reachable": "AccessTheCurtain"
+			"Reachable": "AccessTheCurtain",
+			"Out of Logic": "AccessTheCurtainOOL"
 		},
 		{
 			"id": "Icecastle_boss",
@@ -1830,7 +2153,8 @@
 					"y": 52
 				}
 			],
-			"Reachable": "AccessIceCastleBoss"
+			"Reachable": "AccessIceCastleBoss",
+			"Out of Logic": "AccessIceCastleBossOOL"
 		},
 		{
 			"id": "Icecastle_boss_15",
@@ -1842,7 +2166,8 @@
 					"y": 52
 				}
 			],
-			"Reachable": "AccessIceCastleBoss"
+			"Reachable": "AccessIceCastleBoss",
+			"Out of Logic": "AccessIceCastleBossOOL"
 		},
 		{
 			"id": "Icecastle_bottom_underhang",
@@ -1854,7 +2179,8 @@
 					"y": 52
 				}
 			],
-			"Reachable": "AccessIceCastleBoss"
+			"Reachable": "AccessIceCastleBoss",
+			"Out of Logic": "AccessIceCastleBossOOL"
 		},
 		{
 			"id": "Icecastle_entrance_heart_door",
@@ -1866,7 +2192,8 @@
 					"y": 37
 				}
 			],
-			"Reachable": "AccessIceCastle"
+			"Reachable": "AccessIceCastle",
+			"Out of Logic": "AccessIceCastleOOL"
 		},
 		{
 			"id": "Icecastle_entrance",
@@ -1878,7 +2205,8 @@
 					"y": 37
 				}
 			],
-			"Reachable": "AccessIceCastle"
+			"Reachable": "AccessIceCastle",
+			"Out of Logic": "AccessIceCastleOOL"
 		},
 		{
 			"id": "Icecastle_left_outside",
@@ -1890,7 +2218,8 @@
 					"y": 37
 				}
 			],
-			"Reachable": "AccessIceCastle"
+			"Reachable": "AccessIceCastle",
+			"Out of Logic": "AccessIceCastleOOL"
 		},
 		{
 			"id": "Icecastle_entrance_flower",
@@ -1902,7 +2231,8 @@
 					"y": 52
 				}
 			],
-			"Reachable": "AccessIceCastle"
+			"Reachable": "AccessIceCastle",
+			"Out of Logic": "AccessIceCastleOOL"
 		},
 		{
 			"id": "Icecastle_high_mid_heartdoor",
@@ -1914,7 +2244,8 @@
 					"y": 22
 				}
 			],
-			"Reachable": "AccessIceCastle"
+			"Reachable": "AccessIceCastle",
+			"Out of Logic": "AccessIceCastleOOL"
 		},
 		{
 			"id": "Icecastle_low_mid_heartdoor",
@@ -1926,7 +2257,8 @@
 					"y": 37
 				}
 			],
-			"Reachable": "AccessIceCastle"
+			"Reachable": "AccessIceCastle",
+			"Out of Logic": "AccessIceCastleOOL"
 		},
 		{
 			"id": "Icecastle_low_mid_secret",
@@ -1938,7 +2270,8 @@
 					"y": 37
 				}
 			],
-			"Reachable": "AccessIceCastle"
+			"Reachable": "AccessIceCastle",
+			"Out of Logic": "AccessIceCastleOOL"
 		},
 		{
 			"id": "Icecastle_top_left_heart_door",
@@ -1950,7 +2283,8 @@
 					"y": 7
 				}
 			],
-			"Reachable": "AccessIceCastle"
+			"Reachable": "AccessIceCastle",
+			"Out of Logic": "AccessIceCastleOOL"
 		},
 		{
 			"id": "Icecastle_top_right",
@@ -1962,7 +2296,8 @@
 					"y": 7
 				}
 			],
-			"Reachable": "AccessIceCastle"
+			"Reachable": "AccessIceCastle",
+			"Out of Logic": "AccessIceCastleOOL"
 		},
 		{
 			"id": "Library_heart",
@@ -1974,7 +2309,8 @@
 					"y": 67
 				}
 			],
-			"Reachable": "AccessLibrary"
+			"Reachable": "AccessLibrary",
+			"Out of Logic": "AccessLibraryOOL"
 		},
 		{
 			"id": "Library_flower",
@@ -1986,7 +2322,8 @@
 					"y": 67
 				}
 			],
-			"Reachable": "AccessLibrary"
+			"Reachable": "AccessLibrary",
+			"Out of Logic": "AccessLibraryOOL"
 		},
 		{
 			"id": "Longbeach_water_entrance_flower",
@@ -2005,6 +2342,14 @@
 					"SLIDE",
 					"JUMP_8"
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessDeepDiveRightOOL",
+					"SLIDE",
+					"JUMP_8"
+				]
 			}
 		},
 		{
@@ -2017,7 +2362,8 @@
 					"y": 307
 				}
 			],
-			"Reachable": "AccessMountSide"
+			"Reachable": "AccessMountSide",
+			"Out of Logic": "AccessMountSideOOL"
 		},
 		{
 			"id": "Mountside_right_heart_door",
@@ -2029,7 +2375,8 @@
 					"y": 307
 				}
 			],
-			"Reachable": "AccessMountSide"
+			"Reachable": "AccessMountSide",
+			"Out of Logic": "AccessMountSideOOL"
 		},
 		{
 			"id": "Nightclimb_boss_4",
@@ -2081,10 +2428,7 @@
 				"type": "ALL",
 				"rules": [
 					"AccessNightClimb",
-					{
-						"type": "ITEM",
-						"value": "Hatch"
-					},
+					"HATCH",
 					{
 						"type": "ITEM",
 						"value": "Duck"
@@ -2150,7 +2494,8 @@
 					"y": 97
 				}
 			],
-			"Reachable": "AccessNightWalkUpper"
+			"Reachable": "AccessNightWalkUpper",
+			"Out of Logic": "AccessNightWalkUpperOOL"
 		},
 		{
 			"id": "Nightwalk_hatch",
@@ -2178,7 +2523,8 @@
 						]
 					}
 				]
-			}
+			},
+			"Out of Logic": "AccessNightWalkUpperOOL"
 		},
 		{
 			"id": "Nightwalk_high_flower",
@@ -2190,7 +2536,8 @@
 					"y": 97
 				}
 			],
-			"Reachable": "AccessNightWalkUpper"
+			"Reachable": "AccessNightWalkUpper",
+			"Out of Logic": "AccessNightWalkUpperOOL"
 		},
 		{
 			"id": "Nightwalk_jump_1",
@@ -2232,7 +2579,8 @@
 					"y": 142
 				}
 			],
-			"Reachable": "AccessNightWalkUpper"
+			"Reachable": "AccessNightWalkUpper",
+			"Out of Logic": "AccessNightWalkUpperOOL"
 		},
 		{
 			"id": "Nightwalk_save_flower",
@@ -2333,6 +2681,13 @@
 						]
 					}
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessNightWalkUpperOOL",
+					"RED"
+				]
 			}
 		},
 		{
@@ -2345,7 +2700,8 @@
 					"y": 97
 				}
 			],
-			"Reachable": "AccessNightWalkUpper"
+			"Reachable": "AccessNightWalkUpper",
+			"Out of Logic": "AccessNightWalkUpperOOL"
 		},
 		{
 			"id": "Rainbowdive_100",
@@ -2357,7 +2713,8 @@
 					"y": 142
 				}
 			],
-			"Reachable": "AccessRainbowDive"
+			"Reachable": "AccessRainbowDive",
+			"Out of Logic": "AccessRainbowDiveOOL"
 		},
 		{
 			"id": "Rainbowdive_300",
@@ -2369,7 +2726,8 @@
 					"y": 142
 				}
 			],
-			"Reachable": "AccessRainbowDive"
+			"Reachable": "AccessRainbowDive",
+			"Out of Logic": "AccessRainbowDiveOOL"
 		},
 		{
 			"id": "Rainbowdive_second_prize",
@@ -2381,7 +2739,8 @@
 					"y": 142
 				}
 			],
-			"Reachable": "AccessRainbowDive"
+			"Reachable": "AccessRainbowDive",
+			"Out of Logic": "AccessRainbowDiveOOL"
 		},
 		{
 			"id": "Rainbowdive_first_prize",
@@ -2393,7 +2752,8 @@
 					"y": 142
 				}
 			],
-			"Reachable": "AccessRainbowDive"
+			"Reachable": "AccessRainbowDive",
+			"Out of Logic": "AccessRainbowDiveOOL"
 		},
 		{
 			"id": "Skylands_balloon_chain",
@@ -2411,6 +2771,13 @@
 					"AccessSkyLandsRight",
 					"FIRE2"
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessSkyLandsRightOOL",
+					"FIRE2"
+				]
 			}
 		},
 		{
@@ -2423,7 +2790,8 @@
 					"y": 112
 				}
 			],
-			"Reachable": "AccessSkyLands"
+			"Reachable": "AccessSkyLands",
+			"Out of Logic": "AccessSkyLandsOOL"
 		},
 		{
 			"id": "Skylands_duck",
@@ -2444,6 +2812,16 @@
 						"value": "Duck"
 					}
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessSkyLandsRightOOL",
+					{
+						"type": "ITEM",
+						"value": "Duck"
+					}
+				]
 			}
 		},
 		{
@@ -2456,7 +2834,8 @@
 					"y": 142
 				}
 			],
-			"Reachable": "AccessSkyLandsRight"
+			"Reachable": "AccessSkyLandsRight",
+			"Out of Logic": "AccessSkyLandsRightOOL"
 		},
 		{
 			"id": "Skylands_portal",
@@ -2474,6 +2853,13 @@
 					"AccessGrottoUpper",
 					"RED"
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessGrottoUpperOOL",
+					"RED"
+				]
 			}
 		},
 		{
@@ -2486,7 +2872,20 @@
 					"y": 142
 				}
 			],
-			"Reachable": "AccessSkyLands"
+			"Reachable": {
+				"type": "ALL",
+				"rules": [
+					"AccessSkyLands",
+					"HATCH"
+				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessSkyLandsOOL",
+					"HATCH"
+				]
+			}
 		},
 		{
 			"id": "Skylands_underhang",
@@ -2498,7 +2897,8 @@
 					"y": 67
 				}
 			],
-			"Reachable": "AccessSkyLandsRight"
+			"Reachable": "AccessSkyLandsRight",
+			"Out of Logic": "AccessSkyLandsRightOOL"
 		},
 		{
 			"id": "Skysand_boss",
@@ -2783,7 +3183,8 @@
 					"y": 142
 				}
 			],
-			"Reachable": "AccessSkyTown"
+			"Reachable": "CanBuyEverythingInShop",
+			"Out of Logic": "AccessSkyTown"
 		},
 		{
 			"id": "Skytown_shop_6",
@@ -2866,6 +3267,17 @@
 						"count": 5
 					}
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessStaircaseOOL",
+					{
+						"type": "ITEM",
+						"value": "Secret Flower",
+						"count": 5
+					}
+				]
 			}
 		},
 		{
@@ -2882,6 +3294,17 @@
 				"type": "ALL",
 				"rules": [
 					"AccessStaircase",
+					{
+						"type": "ITEM",
+						"value": "Secret Flower",
+						"count": 10
+					}
+				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessStaircaseOOL",
 					{
 						"type": "ITEM",
 						"value": "Secret Flower",
@@ -2910,6 +3333,17 @@
 						"count": 15
 					}
 				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessStaircaseOOL",
+					{
+						"type": "ITEM",
+						"value": "Secret Flower",
+						"count": 15
+					}
+				]
 			}
 		},
 		{
@@ -2926,6 +3360,17 @@
 				"type": "ALL",
 				"rules": [
 					"AccessStaircase",
+					{
+						"type": "ITEM",
+						"value": "Secret Flower",
+						"count": 20
+					}
+				]
+			},
+			"Out of Logic": {
+				"type": "ALL",
+				"rules": [
+					"AccessStaircaseOOL",
 					{
 						"type": "ITEM",
 						"value": "Secret Flower",
@@ -3141,7 +3586,8 @@
 					"y": 217
 				}
 			],
-			"Reachable": "AccessUnderTomb"
+			"Reachable": "AccessUnderTomb",
+			"Out of Logic": "AccessUnderTombOOL"
 		},
 		{
 			"id": "Undertomb_left_heart_door",
@@ -3153,7 +3599,8 @@
 					"y": 217
 				}
 			],
-			"Reachable": "AccessUnderTomb"
+			"Reachable": "AccessUnderTomb",
+			"Out of Logic": "AccessUnderTombOOL"
 		},
 		{
 			"id": "Undertomb_right_heart_door",
@@ -3165,17 +3612,20 @@
 					"y": 202
 				}
 			],
-			"Reachable": "AccessUnderTomb"
+			"Reachable": "AccessUnderTomb",
+			"Out of Logic": "AccessUnderTombOOL"
 		}
 	],
 	"named_rules": {
 		"AccessBlackCastle": "AccessLongBeach",
+		"AccessBlackCastleOOL": "AccessLongBeachOOL",
 		"AccessBlancLand": "AccessDeepDive",
+		"AccessBlancLandOOL": "AccessDeepDiveOOL",
 		"AccessBottom": {
 			"type": "ALL",
 			"rules": [
 				"AccessFarFallLowerLeft",
-				"JUMP_6",
+				"JUMP_6.5",
 				"SLIDE"
 			]
 		},
@@ -3189,10 +3639,25 @@
 				"YELLOW"
 			]
 		},
+		"AccessTheCurtainOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessHighLandsOOL",
+				"SLIDE",
+				"YELLOW"
+			]
+		},
 		"AccessDarkGrotto": {
 			"type": "ALL",
 			"rules": [
 				"AccessHighLands",
+				"DIVEBOMB"
+			]
+		},
+		"AccessDarkGrottoOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessHighLandsOOL",
 				"DIVEBOMB"
 			]
 		},
@@ -3203,12 +3668,26 @@
 				"DIVEBOMB"
 			]
 		},
+		"AccessDeepDiveOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessGrottoUpperOOL",
+				"DIVEBOMB"
+			]
+		},
 		"AccessDeepTower": "JUMP_4",
 		"AccessFarFall": "AccessSkyTown",
 		"AccessFireCage": {
 			"type": "ALL",
 			"rules": [
 				"AccessGrottoUpper",
+				"DIVEBOMB"
+			]
+		},
+		"AccessFireCageOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessGrottoUpperOOL",
 				"DIVEBOMB"
 			]
 		},
@@ -3222,8 +3701,18 @@
 				"ICE"
 			]
 		},
+		"AccessHighLandsOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessGrottoUpperOOL",
+				"RED",
+				"ICE"
+			]
+		},
 		"AccessIceCastle": "AccessTheCurtainUpper",
+		"AccessIceCastleOOL": "AccessTheCurtainUpperOOL",
 		"AccessLibrary": "AccessTheCurtainUpper",
+		"AccessLibraryOOL": "AccessTheCurtainUpperOOL",
 		"AccessLongBeach": {
 			"type": "ANY",
 			"rules": [
@@ -3232,10 +3721,25 @@
 				"AccessTheCurtainUpper"
 			]
 		},
+		"AccessLongBeachOOL": {
+			"type": "ANY",
+			"rules": [
+				"AccessDeepDiveRightOOL",
+				"AccessDarkGrottoOOL",
+				"AccessTheCurtainUpperOOL"
+			]
+		},
 		"AccessMountSide": {
 			"type": "ALL",
 			"rules": [
 				"AccessGrottoUpper",
+				"RED"
+			]
+		},
+		"AccessMountSideOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessGrottoUpperOOL",
 				"RED"
 			]
 		},
@@ -3249,10 +3753,13 @@
 		},
 		"AccessNightWalk": true,
 		"AccessRainbowDive": "AccessTheCurtainUpper",
+		"AccessRainbowDiveOOL": "AccessTheCurtainUpperOOL",
 		"AccessSkyLands": "AccessTheCurtainUpper",
+		"AccessSkyLandsOOL": "AccessTheCurtainUpperOOL",
 		"AccessSkySand": "AccessNightClimb",
 		"AccessSkyTown": "AccessColdKeep",
 		"AccessStaircase": "AccessNightWalkUpper",
+		"AccessStaircaseOOL": "AccessNightWalkUpperOOL",
 		"AccessStoneCastle": "AccessFarFall",
 		"AccessStrangeCastle": "AccessFarFallLowerLeft",
 		"AccessUnderTomb": {
@@ -3262,23 +3769,25 @@
 				"DIVEBOMB"
 			]
 		},
+		"AccessUnderTombOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessLongBeachOOL",
+				"DIVEBOMB"
+			]
+		},
 		"AccessBlackCastleInner": {
 			"type": "ALL",
 			"rules": [
 				"AccessBlackCastle",
-				"DIVEBOMB",
-				"RED",
-				"SLIDE",
-				{
-					"type": "ITEM",
-					"value": "Double Jump Upgrade",
-					"count": 3
-				},
-				{
-					"type": "ITEM",
-					"value": "Gold Orb",
-					"count": 7
-				}
+				"BlackCastleReqs"
+			]
+		},
+		"AccessBlackCastleInnerOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessBlackCastleOOL",
+				"BlackCastleReqs"
 			]
 		},
 		"AccessBlancLandLowerLeft": {
@@ -3294,11 +3803,24 @@
 				}
 			]
 		},
+		"AccessBlancLandLowerLeftOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessBlancLandOOL",
+				{
+					"type": "ANY",
+					"rules": [
+						"RED",
+						"ICE"
+					]
+				}
+			]
+		},
 		"AccessCloudRunMiddle": {
 			"type": "ALL",
 			"rules": [
 				"AccessCloudRun",
-				"JUMP_8",
+				"JUMP_7",
 				"FIRE"
 			]
 		},
@@ -3316,10 +3838,24 @@
 				"ICE"
 			]
 		},
+		"AccessDarkGrottoPostBossOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessDarkGrottoOOL",
+				"ICE"
+			]
+		},
 		"AccessDeepDiveRight": {
 			"type": "ALL",
 			"rules": [
 				"AccessDeepDive",
+				"JUMP_7"
+			]
+		},
+		"AccessDeepDiveRightOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessDeepDiveOOL",
 				"JUMP_7"
 			]
 		},
@@ -3409,6 +3945,7 @@
 				}
 			]
 		},
+		"AccessGrottoUpperOOL": "JUMP_8",
 		"AccessIceCastleBoss": {
 			"type": "ALL",
 			"rules": [
@@ -3416,8 +3953,17 @@
 				"DIVEBOMB"
 			]
 		},
+		"AccessIceCastleBossOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessIceCastleOOL",
+				"DIVEBOMB"
+			]
+		},
 		"AccessNightWalkUpper": "AccessTheCurtainUpper",
+		"AccessNightWalkUpperOOL": "AccessTheCurtainUpperOOL",
 		"AccessSkyLandsRight": "AccessIceCastleBoss",
+		"AccessSkyLandsRightOOL": "AccessIceCastleBossOOL",
 		"AccessSkySandInner": {
 			"type": "ALL",
 			"rules": [
@@ -3449,7 +3995,14 @@
 				"AccessStoneCastle",
 				"RED",
 				"YELLOW",
-				"JUMP_7"
+				"JUMP_7",
+				{
+					"type": "ANY",
+					"rules": [
+						"STICK",
+						"JUMP_8"
+					]
+				}
 			]
 		},
 		"AccessTheCurtainUpper": {
@@ -3457,6 +4010,31 @@
 			"rules": [
 				"AccessTheCurtain",
 				"JUMP_8"
+			]
+		},
+		"AccessTheCurtainUpperOOL": {
+			"type": "ALL",
+			"rules": [
+				"AccessTheCurtainOOL",
+				"JUMP_8"
+			]
+		},
+		"BlackCastleReqs": {
+			"type": "ALL",
+			"rules": [
+				"DIVEBOMB",
+				"RED",
+				"SLIDE",
+				{
+					"type": "ITEM",
+					"value": "Double Jump Upgrade",
+					"count": 3
+				},
+				{
+					"type": "ITEM",
+					"value": "Gold Orb",
+					"count": 7
+				}
 			]
 		},
 		"CanLightTorches": {
@@ -3539,6 +4117,32 @@
 			"op": ">=",
 			"right": 6
 		},
+		"JUMP_6.5": {
+			"type": "ANY",
+			"rules": [
+				{
+					"type": "VALUE",
+					"left": "JumpHeight",
+					"op": ">=",
+					"right": 7
+				},
+				{
+					"type": "ALL",
+					"rules": [
+						{
+							"type": "ITEM",
+							"value": "Jump Upgrade",
+							"count": 3
+						},
+						{
+							"type": "ITEM",
+							"value": "Double Jump Upgrade",
+							"count": 1
+						}
+					]
+				}
+			]
+		},
 		"JUMP_7": {
 			"type": "VALUE",
 			"left": "JumpHeight",
@@ -3550,7 +4154,11 @@
 			"left": "JumpHeight",
 			"op": ">=",
 			"right": 8
-		}
+		},
+		"HATCH": {
+			"type": "ITEM",
+			"value": "Hatch"
+		},
 	},
 	"named_values": {
 		"JumpHeight": {
