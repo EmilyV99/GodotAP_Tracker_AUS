@@ -605,7 +605,7 @@
 			"Reachable": {
 				"type": "ALL",
 				"rules": [
-					"AccessBlancLandLowerLeft",
+					"AccessBlancLandUpper",
 					"RED",
 					"FIRE"
 				]
@@ -616,21 +616,21 @@
 					{
 						"type": "ALL",
 						"rules": [
-							"AccessBlancLandLowerLeft",
+							"AccessBlancLandUpper",
 							"ICE"
 						]
 					},
 					{
 						"type": "ALL",
 						"rules": [
-							"AccessBlancLandLowerLeftOOL",
+							"AccessBlancLandUpperOOL",
 							"ICE"
 						]
 					},
 					{
 						"type": "ALL",
 						"rules": [
-							"AccessBlancLandLowerLeftOOL",
+							"AccessBlancLandUpperOOL",
 							"RED",
 							"FIRE"
 						]
@@ -651,7 +651,7 @@
 			"Reachable": {
 				"type": "ALL",
 				"rules": [
-					"AccessBlancLandLowerLeft",
+					"AccessBlancLandUpper",
 					"RED",
 					"FIRE"
 				]
@@ -662,21 +662,21 @@
 					{
 						"type": "ALL",
 						"rules": [
-							"AccessBlancLandLowerLeft",
+							"AccessBlancLandUpper",
 							"ICE"
 						]
 					},
 					{
 						"type": "ALL",
 						"rules": [
-							"AccessBlancLandLowerLeftOOL",
+							"AccessBlancLandUpperOOL",
 							"ICE"
 						]
 					},
 					{
 						"type": "ALL",
 						"rules": [
-							"AccessBlancLandLowerLeftOOL",
+							"AccessBlancLandUpperOOL",
 							"RED",
 							"FIRE"
 						]
@@ -697,7 +697,7 @@
 			"Reachable": {
 				"type": "ALL",
 				"rules": [
-					"AccessBlancLandLowerLeft",
+					"AccessBlancLand",
 					"RED",
 					"ICE"
 				]
@@ -728,7 +728,7 @@
 			"Reachable": {
 				"type": "ALL",
 				"rules": [
-					"AccessBlancLandLowerLeft",
+					"AccessBlancLandUpper",
 					"RED",
 					"FIRE",
 					"SLIDE"
@@ -740,8 +740,8 @@
 					{
 						"type": "ANY",
 						"rules": [
-							"AccessBlancLandLowerLeft",
-							"AccessBlancLandLowerLeftOOL"
+							"AccessBlancLandUpper",
+							"AccessBlancLandUpperOOL"
 						]
 					},
 					{
@@ -3790,10 +3790,11 @@
 				"BlackCastleReqs"
 			]
 		},
-		"AccessBlancLandLowerLeft": {
+		"AccessBlancLandUpper": {
 			"type": "ALL",
 			"rules": [
 				"AccessBlancLand",
+				"JUMP_6.5",
 				{
 					"type": "ANY",
 					"rules": [
@@ -3803,10 +3804,11 @@
 				}
 			]
 		},
-		"AccessBlancLandLowerLeftOOL": {
+		"AccessBlancLandUpperOOL": {
 			"type": "ALL",
 			"rules": [
 				"AccessBlancLandOOL",
+				"JUMP_6.5",
 				{
 					"type": "ANY",
 					"rules": [
@@ -4120,12 +4122,7 @@
 		"JUMP_6.5": {
 			"type": "ANY",
 			"rules": [
-				{
-					"type": "VALUE",
-					"left": "JumpHeight",
-					"op": ">=",
-					"right": 7
-				},
+				"JUMP_7",
 				{
 					"type": "ALL",
 					"rules": [
