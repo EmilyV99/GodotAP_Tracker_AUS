@@ -1,8 +1,12 @@
 {
 	"game": "An Untitled Story",
 	"type": "DATA_PACK",
-	"description_bar": "An Untitled Story (WIP) Tracker",
-	"description_ttip": "A WIP tracker for AUS, built for GodotAP clients.",
+	"description_bar": "An Untitled Story Tracker",
+	"description_ttip": "A tracker for AUS, built for GodotAP clients.",
+	"metadata": {
+		"author": "EmilyV99",
+		"url": "https://github.com/EmilyV99/GodotAP_Tracker_AUS"
+	},
 	"GUI": {
 		"type": "Margin",
 		"top": 0,
